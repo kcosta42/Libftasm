@@ -1,0 +1,56 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/09/04 11:46:32 by kcosta            #+#    #+#              #
+#    Updated: 2018/09/04 12:01:36 by kcosta           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# ========== Editable ========== #
+NAME			:= libfts.a
+# ============================== #
+
+# ========== Standard ========== #
+CASM			:= nasm
+FLAGS			:= -f macho64
+# ============================== #
+
+# =========== Files ============ #
+SRCS_FILES		:=	ft_bzero.s \
+					ft_memset.s
+# ============================== #
+
+# ========== Sources =========== #
+SRCS_PATH		:= sources/
+SRCS			:= $(addprefix $(SRCS_PATH), $(SRCS_FILES))
+# ============================== #
+
+# ========== Objects =========== #
+OBJS_PATH		:= objs/
+OBJS			:= $(addprefix $(OBJS_PATH), $(SRCS_FILES:.s=.o))
+# ============================== #
+
+.PHONY: all clean fclean re
+
+all: $(NAME)
+
+$(OBJS_PATH)%.o: $(SRCS_PATH)%.s
+	@mkdir $(OBJS_PATH) 2> /dev/null || true
+	$(CASM) $(FLAGS) $< -o $@
+
+$(NAME): $(OBJS)
+	@ar rc -v $(NAME) $(OBJS)
+	ranlib $(NAME)
+
+clean:
+	@rm -fv $(OBJS)
+	@rmdir $(OBJS_PATH) 2> /dev/null || true
+
+fclean: clean
+	@rm -fv $(NAME)
+
+re: fclean all

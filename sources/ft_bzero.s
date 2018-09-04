@@ -1,16 +1,12 @@
-section .data
-
-
 section .text
-	global start
-	global _main
+	global _ft_bzero
 
-ft_memset:
-
-
-start:
-	call _main
-	ret
-
-_main:
+_ft_bzero:
+	xor rcx, rcx
+	loop_start:
+		mov al, 0
+		mov [rdi + rcx], al
+		inc rcx
+		cmp rcx, rsi
+		jne loop_start
 	ret
