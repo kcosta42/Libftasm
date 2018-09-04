@@ -3,10 +3,9 @@ section .text
 
 _ft_bzero:
 	xor rcx, rcx
-	loop_start:
-		mov al, 0
-		mov [rdi + rcx], al
+	loop:
+		mov byte [rdi + rcx], 0
 		inc rcx
 		cmp rcx, rsi
-		jne loop_start
+		jne loop
 	ret

@@ -3,10 +3,10 @@ section .text
 
 _ft_memset:
 	xor rcx, rcx
-	loop_start:
+	loop:
 		mov [rdi + rcx], rsi
 		inc rcx
 		cmp rcx, rdx
-		jne loop_start
+		jne loop
 	mov rax, rdi
 	ret

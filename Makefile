@@ -6,7 +6,7 @@
 #    By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/04 11:46:32 by kcosta            #+#    #+#              #
-#    Updated: 2018/09/04 12:01:36 by kcosta           ###   ########.fr        #
+#    Updated: 2018/09/04 21:13:00 by kcosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,17 @@ FLAGS			:= -f macho64
 # ============================== #
 
 # =========== Files ============ #
-SRCS_FILES		:=	ft_bzero.s \
-					ft_memset.s
+SRCS_FILES		:=	ft_bzero.s		\
+					ft_isalpha.s	\
+					ft_isdigit.s	\
+					ft_isalnum.s	\
+					ft_isascii.s	\
+					ft_isprint.s	\
+					ft_toupper.s	\
+					ft_tolower.s	\
+					ft_puts.s		\
+					ft_memset.s		\
+					ft_memcpy.s
 # ============================== #
 
 # ========== Sources =========== #
