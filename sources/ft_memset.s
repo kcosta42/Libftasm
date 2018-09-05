@@ -2,6 +2,8 @@ section .text
 	global _ft_memset
 
 _ft_memset:
+	push rcx
+
 	xor rcx, rcx
 	loop:
 		mov [rdi + rcx], rsi
@@ -9,4 +11,6 @@ _ft_memset:
 		cmp rcx, rdx
 		jne loop
 	mov rax, rdi
+
+	pop rcx
 	ret

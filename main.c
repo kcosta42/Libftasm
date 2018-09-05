@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:04:32 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/04 21:13:41 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/05 10:50:11 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ extern int	ft_isascii(int c);
 extern int	ft_isprint(int c);
 extern int	ft_toupper(int c);
 extern int	ft_tolower(int c);
+extern int	ft_puts(const char *s);
 
 int main(void)
 {
