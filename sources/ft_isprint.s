@@ -5,7 +5,7 @@ _ft_isprint:
 	cmp rdi, 0x20
 	jl false
 	cmp rdi, 0x7f
-	jle true
+	jl true
 	false:
 		mov rax, 0
 		ret
