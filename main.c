@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:04:32 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/06 13:22:50 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/07 13:27:39 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ void ft_bzero_test(void)
 {
 	char *str;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	str = strdup("Hello World!");
 	printf("\"%s\"\n", str);
 	bzero(str, strlen(str));
 	printf("\"%s\"\n", str);
 	free(str);
-	puts("\nMine: ");
+	puts("\nMine:");
 	str = strdup("Hello World!");
 	printf("\"%s\"\n", str);
 	ft_bzero(str, strlen(str));
@@ -47,13 +47,13 @@ void ft_bzero_test(void)
 
 	puts("");
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	str = strdup("Still here ?");
 	printf("\"%s\"\n", str);
 	bzero(str + 2, strlen(str) - 2);
 	printf("\"%s\"\n", str);
 	free(str);
-	puts("\nMine: ");
+	puts("\nMine:");
 	str = strdup("Still here ?");
 	printf("\"%s\"\n", str);
 	ft_bzero(str + 2, strlen(str) - 2);
@@ -62,7 +62,7 @@ void ft_bzero_test(void)
 
 	puts("");
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	str = strdup("Bye ;)");
 	printf("\"%s\"\n", str);
 	bzero(str + 2, 2);
@@ -70,7 +70,7 @@ void ft_bzero_test(void)
 	printf("\"%s\"\n", str + 3);
 	printf("\"%s\"\n", str + 4);
 	free(str);
-	puts("\nMine: ");
+	puts("\nMine:");
 	str = strdup("Bye ;)");
 	printf("\"%s\"\n", str);
 	ft_bzero(str + 2, 2);
@@ -85,7 +85,7 @@ void ft_strcat_test(void)
 {
 	char *str;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	str = (char *)malloc(sizeof(char) * 32);
 	str[0] = 0;
 	str = strcat(str, "Hello ");
@@ -93,7 +93,7 @@ void ft_strcat_test(void)
 	printf("%s", str);
 	free(str);
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	str = (char *)malloc(sizeof(char) * 32);
 	str[0] = 0;
 	str = ft_strcat(str, "Hello ");
@@ -108,7 +108,7 @@ void ft_isalpha_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -120,7 +120,7 @@ void ft_isalpha_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -139,7 +139,7 @@ void ft_isdigit_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -151,7 +151,7 @@ void ft_isdigit_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -170,7 +170,7 @@ void ft_isalnum_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -182,7 +182,7 @@ void ft_isalnum_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -201,7 +201,7 @@ void ft_isascii_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -213,7 +213,7 @@ void ft_isascii_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -232,7 +232,7 @@ void ft_isprint_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -244,7 +244,7 @@ void ft_isprint_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -263,7 +263,7 @@ void ft_toupper_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -275,7 +275,7 @@ void ft_toupper_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -294,7 +294,7 @@ void ft_tolower_test(void)
 	int	j;
 	int	ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	j = -9;
 	while (j < 255)
 	{
@@ -306,7 +306,7 @@ void ft_tolower_test(void)
 		j++;
 	}
 
-	puts("\nMine: ");
+	puts("\nMine:");
 	j = -9;
 	while (j < 255)
 	{
@@ -324,7 +324,7 @@ void ft_puts_test(void)
 {
 	int ret;
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	ret = puts("Hello World!");
 	if (ret > 0)
 		printf("(nonnegative value returned)");
@@ -332,7 +332,7 @@ void ft_puts_test(void)
 		printf("(negative value returned)");
 	else
 		printf("(returns 0)");
-	puts("\nMine: ");
+	puts("\nMine:");
 	ret = ft_puts("Hello World!");
 	if (ret > 0)
 		printf("(nonnegative value returned)");
@@ -343,7 +343,7 @@ void ft_puts_test(void)
 
 	puts("");
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	ret = puts(NULL);
 	if (ret > 0)
 		printf("(nonnegative value returned)");
@@ -351,7 +351,7 @@ void ft_puts_test(void)
 		printf("(negative value returned)");
 	else
 		printf("(returns 0)");
-	puts("\nMine: ");
+	puts("\nMine:");
 	ret = ft_puts(NULL);
 	if (ret > 0)
 		printf("(nonnegative value returned)");
@@ -362,7 +362,7 @@ void ft_puts_test(void)
 
 	puts("");
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	ret = puts("");
 	if (ret > 0)
 		printf("(nonnegative value returned)");
@@ -370,7 +370,7 @@ void ft_puts_test(void)
 		printf("(negative value returned)");
 	else
 		printf("(returns 0)");
-	puts("\nMine: ");
+	puts("\nMine:");
 	ret = ft_puts("");
 	if (ret > 0)
 		printf("(nonnegative value returned)");
@@ -395,28 +395,28 @@ extern size_t	ft_strlen(const char *s);
 void ft_strlen_test(void)
 {
 	size_t	ret;
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	ret = strlen("");
 	printf("%zu", ret);
-	puts("\nMine: ");
+	puts("\nMine:");
 	ret = ft_strlen("");
 	printf("%zu", ret);
 
 	puts("");
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	ret = strlen("Hello World!");
 	printf("%zu", ret);
-	puts("\nMine: ");
+	puts("\nMine:");
 	ret = ft_strlen("Hello World!");
 	printf("%zu", ret);
 
 	puts("");
 
-	puts("\nOriginal: ");
+	puts("\nOriginal:");
 	ret = strlen("Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.");
 	printf("%zu", ret);
-	puts("\nMine: ");
+	puts("\nMine:");
 	ret = ft_strlen("Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.");
 	printf("%zu", ret);
 }
@@ -426,13 +426,13 @@ void ft_strlen_test(void)
 // {
 // 	char *str;
 
-// 	puts("\nOriginal: ");
+// 	puts("\nOriginal:");
 // 	str = strdup("Hello World!");
 // 	printf("%s", str);
 // 	str = memset(str, 'A', strlen(str));
 // 	printf("%s", str);
 // 	free(str);
-// 	puts("\nMine: ");
+// 	puts("\nMine:");
 // 	str = strdup("Hello World!");
 // 	printf("%s", str);
 // 	str = ft_memset(str, 'A', strlen(str));
@@ -441,13 +441,13 @@ void ft_strlen_test(void)
 
 // 	puts("");
 
-// 	puts("\nOriginal: ");
+// 	puts("\nOriginal:");
 // 	str = strdup("Bye ;)");
 // 	printf("%s", str);
 // 	str = memset(str, 'B', 2);
 // 	printf("%s", str);
 // 	free(str);
-// 	puts("\nMine: ");
+// 	puts("\nMine:");
 // 	str = strdup("Bye ;)");
 // 	printf("%s", str);
 // 	str = ft_memset(str, 'B', 2);
@@ -460,13 +460,13 @@ void ft_strlen_test(void)
 // {
 // 	char *str;
 
-// 	puts("\nOriginal: ");
+// 	puts("\nOriginal:");
 // 	str = (char *)malloc(sizeof(char) * 32);
 // 	str[0] = 0;
 // 	memcpy(str, "Hello World!", 12);
 // 	printf("%s", str);
 // 	free(str);
-// 	puts("\nMine: ");
+// 	puts("\nMine:");
 // 	str = (char *)malloc(sizeof(char) * 32);
 // 	str[0] = 0;
 // 	ft_memcpy(str, "Hello World!", 12);
@@ -475,13 +475,13 @@ void ft_strlen_test(void)
 
 // 	puts("");
 
-// 	puts("\nOriginal: ");
+// 	puts("\nOriginal:");
 // 	str = (char *)malloc(sizeof(char) * 32);
 // 	str[0] = 0;
 // 	memcpy(str, "Bye World!", 3);
 // 	printf("%s", str);
 // 	free(str);
-// 	puts("\nMine: ");
+// 	puts("\nMine:");
 // 	str = (char *)malloc(sizeof(char) * 32);
 // 	str[0] = 0;
 // 	ft_memcpy(str, "Bye World!", 3);
@@ -494,11 +494,11 @@ void ft_strlen_test(void)
 // {
 // 	char *str;
 
-// 	puts("\nOriginal: ");
+// 	puts("\nOriginal:");
 // 	str = strdup("Hello World");
 // 	printf("%s", str);
 // 	free(str);
-// 	puts("\nMine: ");
+// 	puts("\nMine:");
 // 	str = ft_strdup("Hello World");
 // 	printf("%s", str);
 // 	free(str);
@@ -544,6 +544,23 @@ void ft_strlen_test(void)
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
+extern int	ft_atoi(const char *str);
+
+void ft_atoi_test(void)
+{
+	puts("\nOriginal:");
+	printf("%d", atoi("42"));
+	puts("\nMine:");
+	printf("%d", ft_atoi("42"));
+
+	puts("");
+
+	puts("\nOriginal:");
+	printf("%d", atoi("   \t-42"));
+	puts("\nMine:");
+	printf("%d", ft_atoi("   \t-42"));
+}
+
 int main(void)
 {
 	ft_bzero_test();
@@ -577,6 +594,9 @@ int main(void)
 	puts("");
 
 	ft_strlen_test();
+	puts("");
+
+	ft_atoi_test();
 	puts("");
 
 	return (0);

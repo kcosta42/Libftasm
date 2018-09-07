@@ -6,7 +6,7 @@
 #    By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/04 11:46:32 by kcosta            #+#    #+#              #
-#    Updated: 2018/09/06 14:39:51 by kcosta           ###   ########.fr        #
+#    Updated: 2018/09/07 12:14:56 by kcosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ SRCS_FILES		:=	ft_bzero.s		\
 					ft_toupper.s	\
 					ft_tolower.s	\
 					ft_puts.s		\
-					ft_strlen.s
+					ft_strlen.s		\
+					ft_atoi.s
 # ============================== #
 
 # ========== Sources =========== #
