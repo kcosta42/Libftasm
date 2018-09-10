@@ -2,17 +2,12 @@ section .text
 	global _ft_memcpy
 
 _ft_memcpy:
-	push rcx
+	push rdi
 
-	mov rax, rdi
-	xor rcx, rcx
-	loop:
-		add rdi, rcx
-		add rsi, rcx
-		mov rdi, rsi
-		inc rcx
-		cmp rcx, rdx
-		jne loop
+	mov rcx, rdx
 
-	pop rcx
+	cld
+	repnz movsb
+
+	pop rax
 	ret

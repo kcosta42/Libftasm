@@ -6,10 +6,12 @@ _ft_bzero:
 
 	xor rcx, rcx
 	loop:
+		cmp rcx, rsi
+		je return
 		mov byte [rdi + rcx], 0
 		inc rcx
-		cmp rcx, rsi
-		jne loop
+		jmp loop
 
-	pop rcx
-	ret
+	return:
+		pop rcx
+		ret

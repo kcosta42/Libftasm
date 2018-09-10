@@ -1,43 +1,26 @@
 %define MACH_SYSCALL(nb) 0x2000000 | nb
-%define WRITE		4
-%define STDOUT		1
+%define WRITE	4
+%define STDOUT	1
 
 section .data
-null:
-	.string db "(null)", 10
-	.len equ $ - null.string
-
+nullstr:
+	.string db "(null)"
+	.len equ $ - nullstr.string
+	.nl db 10
 
 section .text
 	global _ft_puts
-
-_ft_strlen:
-	push rbx
-	push rcx
-
-	mov rbx, rdi
-	xor rax, rax
-	mov rcx, 0xffffffff
-
-	repne scasb
-
-	sub rdi, rbx
-	mov rax, rdi
-	dec rax
-
-	pop rbx
-	pop rcx
-	ret
+	extern _ft_strlen
 
 _ft_puts:
-	push rsi
-	push rdi
-	push rdx
 
 	cmp rdi, 0
 	jz null_str
 
+	push rdi
 	call _ft_strlen
+	pop rdi
+
 	mov rdx, rax
 	lea rsi, [rel rdi]
 	mov rdi, STDOUT
@@ -47,13 +30,17 @@ _ft_puts:
 
 	null_str:
 		mov rdi, STDOUT
-		lea rsi, [rel null.string]
-		mov rdx, null.len
+		lea rsi, [rel nullstr.string]
+		mov rdx, nullstr.len
 		mov rax, MACH_SYSCALL(WRITE)
 		syscall
 
 	ret:
-		pop rsi
-		pop rdi
-		pop rdx
+		mov rdi, STDOUT
+		lea rsi, [rel nullstr.nl]
+		mov rdx, 1
+		mov rax, MACH_SYSCALL(WRITE)
+		syscall
+
+		mov rax, 10
 		ret

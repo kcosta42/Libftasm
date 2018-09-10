@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:04:32 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/07 13:27:39 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/10 18:59:34 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <fcntl.h>
+#include <assert.h>
 
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
@@ -27,7 +28,7 @@
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 
-extern void		ft_bzero(void *s, size_t n);
+extern void	ft_bzero(void *s, size_t n);
 void ft_bzero_test(void)
 {
 	char *str;
@@ -102,7 +103,7 @@ void ft_strcat_test(void)
 	free(str);
 }
 
-extern int		ft_isalpha(int c);
+extern int	ft_isalpha(int c);
 void ft_isalpha_test(void)
 {
 	int	j;
@@ -133,7 +134,7 @@ void ft_isalpha_test(void)
 	}
 }
 
-extern int		ft_isdigit(int c);
+extern int	ft_isdigit(int c);
 void ft_isdigit_test(void)
 {
 	int	j;
@@ -164,7 +165,7 @@ void ft_isdigit_test(void)
 	}
 }
 
-extern int		ft_isalnum(int c);
+extern int	ft_isalnum(int c);
 void ft_isalnum_test(void)
 {
 	int	j;
@@ -195,7 +196,7 @@ void ft_isalnum_test(void)
 	}
 }
 
-extern int		ft_isascii(int c);
+extern int	ft_isascii(int c);
 void ft_isascii_test(void)
 {
 	int	j;
@@ -226,7 +227,7 @@ void ft_isascii_test(void)
 	}
 }
 
-extern int		ft_isprint(int c);
+extern int	ft_isprint(int c);
 void ft_isprint_test(void)
 {
 	int	j;
@@ -257,7 +258,7 @@ void ft_isprint_test(void)
 	}
 }
 
-extern int		ft_toupper(int c);
+extern int	ft_toupper(int c);
 void ft_toupper_test(void)
 {
 	int	j;
@@ -288,7 +289,7 @@ void ft_toupper_test(void)
 	}
 }
 
-extern int		ft_tolower(int c);
+extern int	ft_tolower(int c);
 void ft_tolower_test(void)
 {
 	int	j;
@@ -319,7 +320,7 @@ void ft_tolower_test(void)
 	}
 }
 
-extern int		ft_puts(const char *s);
+extern int	ft_puts(const char *s);
 void ft_puts_test(void)
 {
 	int ret;
@@ -327,7 +328,7 @@ void ft_puts_test(void)
 	puts("\nOriginal:");
 	ret = puts("Hello World!");
 	if (ret > 0)
-		printf("(nonnegative value returned)");
+		printf("(nonnegative value returned) - %d", ret);
 	else if (ret < 0)
 		printf("(negative value returned)");
 	else
@@ -335,7 +336,7 @@ void ft_puts_test(void)
 	puts("\nMine:");
 	ret = ft_puts("Hello World!");
 	if (ret > 0)
-		printf("(nonnegative value returned)");
+		printf("(nonnegative value returned) - %d", ret);
 	else if (ret < 0)
 		printf("(negative value returned)");
 	else
@@ -346,7 +347,7 @@ void ft_puts_test(void)
 	puts("\nOriginal:");
 	ret = puts(NULL);
 	if (ret > 0)
-		printf("(nonnegative value returned)");
+		printf("(nonnegative value returned) - %d", ret);
 	else if (ret < 0)
 		printf("(negative value returned)");
 	else
@@ -354,7 +355,7 @@ void ft_puts_test(void)
 	puts("\nMine:");
 	ret = ft_puts(NULL);
 	if (ret > 0)
-		printf("(nonnegative value returned)");
+		printf("(nonnegative value returned) - %d", ret);
 	else if (ret < 0)
 		printf("(negative value returned)");
 	else
@@ -365,7 +366,7 @@ void ft_puts_test(void)
 	puts("\nOriginal:");
 	ret = puts("");
 	if (ret > 0)
-		printf("(nonnegative value returned)");
+		printf("(nonnegative value returned) - %d", ret);
 	else if (ret < 0)
 		printf("(negative value returned)");
 	else
@@ -373,7 +374,7 @@ void ft_puts_test(void)
 	puts("\nMine:");
 	ret = ft_puts("");
 	if (ret > 0)
-		printf("(nonnegative value returned)");
+		printf("(nonnegative value returned) - %d", ret);
 	else if (ret < 0)
 		printf("(negative value returned)");
 	else
@@ -421,90 +422,90 @@ void ft_strlen_test(void)
 	printf("%zu", ret);
 }
 
-// extern void		*ft_memset(void *b, int c, size_t len);
-// void ft_memset_test(void)
-// {
-// 	char *str;
+extern void	*ft_memset(void *b, int c, size_t len);
+void ft_memset_test(void)
+{
+	char *str;
 
-// 	puts("\nOriginal:");
-// 	str = strdup("Hello World!");
-// 	printf("%s", str);
-// 	str = memset(str, 'A', strlen(str));
-// 	printf("%s", str);
-// 	free(str);
-// 	puts("\nMine:");
-// 	str = strdup("Hello World!");
-// 	printf("%s", str);
-// 	str = ft_memset(str, 'A', strlen(str));
-// 	printf("%s", str);
-// 	free(str);
+	puts("\nOriginal:");
+	str = strdup("Hello World!");
+	printf("%s", str);
+	str = memset(str, 'A', strlen(str));
+	printf(" - %s", str);
+	free(str);
+	puts("\nMine:");
+	str = strdup("Hello World!");
+	printf("%s", str);
+	str = ft_memset(str, 'A', strlen(str));
+	printf(" - %s", str);
+	free(str);
 
-// 	puts("");
+	puts("");
 
-// 	puts("\nOriginal:");
-// 	str = strdup("Bye ;)");
-// 	printf("%s", str);
-// 	str = memset(str, 'B', 2);
-// 	printf("%s", str);
-// 	free(str);
-// 	puts("\nMine:");
-// 	str = strdup("Bye ;)");
-// 	printf("%s", str);
-// 	str = ft_memset(str, 'B', 2);
-// 	printf("%s", str);
-// 	free(str);
-// }
+	puts("\nOriginal:");
+	str = strdup("Bye ;)");
+	printf("%s", str);
+	str = memset(str, 'B', 2);
+	printf(" - %s", str);
+	free(str);
+	puts("\nMine:");
+	str = strdup("Bye ;)");
+	printf("%s", str);
+	str = ft_memset(str, 'B', 2);
+	printf(" - %s", str);
+	free(str);
+}
 
-// extern void		*ft_memcpy(void *dst, const void *src, size_t n);
-// void ft_memcpy_test(void)
-// {
-// 	char *str;
+extern void	*ft_memcpy(void *dst, const void *src, size_t n);
+void ft_memcpy_test(void)
+{
+	char *str;
 
-// 	puts("\nOriginal:");
-// 	str = (char *)malloc(sizeof(char) * 32);
-// 	str[0] = 0;
-// 	memcpy(str, "Hello World!", 12);
-// 	printf("%s", str);
-// 	free(str);
-// 	puts("\nMine:");
-// 	str = (char *)malloc(sizeof(char) * 32);
-// 	str[0] = 0;
-// 	ft_memcpy(str, "Hello World!", 12);
-// 	printf("%s", str);
-// 	free(str);
+	puts("\nOriginal:");
+	str = (char *)malloc(sizeof(char) * 32);
+	str[0] = 0;
+	memcpy(str, "Hello World!", 12);
+	printf("%s", str);
+	free(str);
+	puts("\nMine:");
+	str = (char *)malloc(sizeof(char) * 32);
+	str[0] = 0;
+	ft_memcpy(str, "Hello World!", 12);
+	printf("%s", str);
+	free(str);
 
-// 	puts("");
+	puts("");
 
-// 	puts("\nOriginal:");
-// 	str = (char *)malloc(sizeof(char) * 32);
-// 	str[0] = 0;
-// 	memcpy(str, "Bye World!", 3);
-// 	printf("%s", str);
-// 	free(str);
-// 	puts("\nMine:");
-// 	str = (char *)malloc(sizeof(char) * 32);
-// 	str[0] = 0;
-// 	ft_memcpy(str, "Bye World!", 3);
-// 	printf("%s", str);
-// 	free(str);
-// }
+	puts("\nOriginal:");
+	str = (char *)malloc(sizeof(char) * 32);
+	str[0] = 0;
+	memcpy(str, "Bye World!", 3);
+	printf("%s", str);
+	free(str);
+	puts("\nMine:");
+	str = (char *)malloc(sizeof(char) * 32);
+	str[0] = 0;
+	ft_memcpy(str, "Bye World!", 3);
+	printf("%s", str);
+	free(str);
+}
 
-// extern char		*ft_strdup(const char *s1);
-// void ft_strdup_test(void)
-// {
-// 	char *str;
+extern char		*ft_strdup(const char *s1);
+void ft_strdup_test(void)
+{
+	char *str;
 
-// 	puts("\nOriginal:");
-// 	str = strdup("Hello World");
-// 	printf("%s", str);
-// 	free(str);
-// 	puts("\nMine:");
-// 	str = ft_strdup("Hello World");
-// 	printf("%s", str);
-// 	free(str);
-// }
+	puts("\nOriginal:");
+	str = strdup("Hello World");
+	printf("%s", str);
+	free(str);
+	puts("\nMine:");
+	str = ft_strdup("Hello World");
+	printf("%s", str);
+	free(str);
+}
 
-// extern void		ft_cat(int fd);
+// extern void	ft_cat(int fd);
 // void ft_cat_test(void)
 // {
 // 	int fd;
@@ -544,8 +545,145 @@ void ft_strlen_test(void)
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
-extern int	ft_atoi(const char *str);
+extern int	ft_isblank(int c);
+void ft_isblank_test(void)
+{
+	int	j;
+	int	ret;
 
+	puts("\nOriginal:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = isblank(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+
+	puts("\nMine:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = ft_isblank(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+}
+
+extern int	ft_isspace(int c);
+void ft_isspace_test(void)
+{
+	int	j;
+	int	ret;
+
+	puts("\nOriginal:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = isspace(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+
+	puts("\nMine:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = ft_isspace(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+}
+
+extern int	ft_islower(int c);
+void ft_islower_test(void)
+{
+	int	j;
+	int	ret;
+
+	puts("\nOriginal:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = islower(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+
+	puts("\nMine:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = ft_islower(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+}
+
+extern int	ft_isupper(int c);
+void ft_isupper_test(void)
+{
+	int	j;
+	int	ret;
+
+	puts("\nOriginal:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = isupper(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+
+	puts("\nMine:");
+	j = -9;
+	while (j < 255)
+	{
+		ret = ft_isupper(j);
+		if (j % 10 == 0)
+			printf("%d ", ret);
+		else
+			printf("%d", ret);
+		j++;
+	}
+}
+
+// extern char	*ft_strcpy(char *dst, const char *src);
+// void ft_strcpy_test(void)
+// {
+// 	char	buf1[6], buf2[6];
+
+// 	bzero(buf1, 6);
+// 	bzero(buf2, 6);
+// 	strcmp(ft_strcpy(buf1, "abcde"), strcpy(buf1, "abcde"));
+
+// 	bzero(buf1, 6);
+// 	bzero(buf2, 6);
+// 	strcmp(ft_strcpy(buf1, "abc"), strcpy(buf1, "abc"));
+// }
+
+extern int	ft_atoi(const char *str);
 void ft_atoi_test(void)
 {
 	puts("\nOriginal:");
@@ -563,41 +701,68 @@ void ft_atoi_test(void)
 
 int main(void)
 {
+	puts("----------BASIC TEST--------------");
+
+	puts("\nft_bzero");
 	ft_bzero_test();
-	puts("");
 
+	puts("\nft_strcat");
 	ft_strcat_test();
-	puts("");
 
+	puts("\nft_isalpha");
 	ft_isalpha_test();
-	puts("");
 
+	puts("\nft_isdigit");
 	ft_isdigit_test();
-	puts("");
 
+	puts("\nft_isalnum");
 	ft_isalnum_test();
-	puts("");
 
+	puts("\nft_isascii");
 	ft_isascii_test();
-	puts("");
 
+	puts("\nft_isprint");
 	ft_isprint_test();
-	puts("");
 
+	puts("\nft_toupper");
 	ft_toupper_test();
-	puts("");
 
+	puts("\nft_tolower");
 	ft_tolower_test();
-	puts("");
 
+	puts("\nft_puts");
 	ft_puts_test();
-	puts("");
 
+	puts("\n----------ADVANCED TEST--------------");
+
+	puts("\nft_strlen");
 	ft_strlen_test();
-	puts("");
 
-	ft_atoi_test();
-	puts("");
+	puts("\nft_memset");
+	ft_memset_test();
+
+	puts("\nft_memcpy");
+	ft_memcpy_test();
+
+	puts("\nft_strdup");
+	ft_strdup_test();
+
+	puts("\n-------------BONUS TEST--------------");
+
+	puts("\nft_isblank");
+	ft_isblank_test();
+
+	puts("\nft_isspace");
+	ft_isspace_test();
+
+	puts("\nft_islower");
+	ft_islower_test();
+
+	puts("\nft_isupper");
+	ft_isupper_test();
+
+	// puts("\nft_atoi");
+	// ft_atoi_test();
 
 	return (0);
 }

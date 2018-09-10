@@ -1,11 +1,11 @@
 section .text
-	global _ft_isprint
+	global _ft_isblank
 
-_ft_isprint:
+_ft_isblank:
 	cmp rdi, 0x20	; cmp rdi, 'sp'
-	jl false
-	cmp rdi, 0x7f	; cmp rdi, 'del'
-	jl true
+	je true
+	cmp rdi, 0x09	; cmp rdi, 'ht'
+	je true
 	false:
 		mov rax, 0
 		ret
