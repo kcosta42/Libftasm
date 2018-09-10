@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:45:22 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 19:59:22 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/10 22:48:47 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void	ft_strdup_test(void);
 void	ft_strlen_test(void);
 void	ft_strcpy_test(void);
 void	ft_atoi_test(void);
+void	ft_cat_test(void);
 
 #endif

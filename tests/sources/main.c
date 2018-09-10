@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:46:25 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 20:28:14 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/10 22:49:08 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,11 @@ int main(void)
 	puts("\nft_strdup");
 	ft_strdup_test();
 
-	puts("\ft_atoi");
+	puts("\nft_atoi");
 	ft_atoi_test();
+
+	puts("\nft_cat");
+	ft_cat_test();
 
 	return (0);
 }
