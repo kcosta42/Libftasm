@@ -6,13 +6,13 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 22:40:53 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 22:42:01 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/11 12:50:25 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_tests.h"
 
-extern void	ft_cat(int fd);
+extern void ft_cat(int fd);
 static void simple_test(void)
 {
 	int pids[2];
@@ -38,12 +38,43 @@ static void simple_test(void)
 	close(pids[1]);
 	close(saved_stdout);
 	system("rm catout");
-	mt_assert(memcmp(buf, "12345678912345678", 17) == 0);
+	assert(memcmp(buf, "12345678912345678", 17) == 0);
+}
+
+void fd_negative_test(void)
+{
+	ft_cat(-1);
+}
+
+// void close_before_cat(void)
+// {
+// 	int fd;
+
+// 	fd = open(__FILE__, O_RDONLY);
+// 	if (fd > 0)
+// 	{
+// 		close(fd);
+// 		ft_cat(fd);
+// 	}
+// }
+
+static void simple_test2(void)
+{
+	int fd;
+
+	fd = open(__FILE__, O_RDONLY);
+	ft_cat(fd);
+	close(fd);
 }
 
 void	ft_cat_test(void)
 {
 	printf("Test 01: ");
 	simple_test();
+	printf("OK\nTest 02: ");
+	fd_negative_test();
+	printf("OK\nTest 03: ");
+	// close_before_cat();
+	simple_test2();
 	printf("OK\n");
 }
