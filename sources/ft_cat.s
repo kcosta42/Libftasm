@@ -11,10 +11,6 @@ section .text
 	global _ft_cat
 
 _ft_cat:
-	mov rax, 0xffffffff
-	cmp rdi, rax
-	je return
-
 	mov r13, rdi
 	lea r14, [rel buffer]
 
@@ -24,6 +20,7 @@ _ft_cat:
 		mov rdx, BUFFER_SIZE
 		mov rax, MACH_SYSCALL(SYS_READ)
 		syscall
+		jc return
 
 		cmp rax, 0x0
 		je return

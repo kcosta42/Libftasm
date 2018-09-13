@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 22:40:53 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/11 12:50:25 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/13 23:18:39 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,17 @@ void fd_negative_test(void)
 	ft_cat(-1);
 }
 
-// void close_before_cat(void)
-// {
-// 	int fd;
+void close_before_cat(void)
+{
+	int fd;
 
-// 	fd = open(__FILE__, O_RDONLY);
-// 	if (fd > 0)
-// 	{
-// 		close(fd);
-// 		ft_cat(fd);
-// 	}
-// }
+	fd = open(__FILE__, O_RDONLY);
+	if (fd > 0)
+	{
+		close(fd);
+		ft_cat(fd);
+	}
+}
 
 static void simple_test2(void)
 {
@@ -74,7 +74,7 @@ void	ft_cat_test(void)
 	printf("OK\nTest 02: ");
 	fd_negative_test();
 	printf("OK\nTest 03: ");
-	// close_before_cat();
-	simple_test2();
+	close_before_cat();
 	printf("OK\n");
+	simple_test2();
 }
