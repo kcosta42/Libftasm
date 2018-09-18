@@ -6,7 +6,7 @@
 #    By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/07 12:10:08 by kcosta            #+#    #+#              #
-#    Updated: 2018/09/10 22:55:15 by kcosta           ###   ########.fr        #
+#    Updated: 2018/09/18 13:07:34 by kcosta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,9 @@ SRCS_FILES		:=	main.c				\
 					ft_strlen_test.c	\
 					ft_strcpy_test.c	\
 					ft_atoi_test.c		\
-					ft_cat_test.c
+					ft_cat_test.c		\
+					ft_putchar_test.c	\
+					ft_putnbr_test.c
 HEADERS_FILES	:=	ft_tests.h
 # ============================== #
 

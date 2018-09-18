@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:46:25 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 22:49:08 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/18 13:11:41 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,12 @@ int main(void)
 
 	puts("\nft_cat");
 	ft_cat_test();
+
+	puts("\nft_putchar");
+	ft_putchar_test();
+
+	// puts("\nft_putnbr");
+	// ft_putnbr_test();
 
 	return (0);
 }
