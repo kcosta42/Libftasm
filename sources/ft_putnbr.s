@@ -4,10 +4,11 @@ section .text
 
 ft_dcount:
 
+	xor rcx, rcx
+
 	cmp rdi, 0x0
 	je ret_zero
 
-	xor rcx, rcx
 	mov r14, 0x0A
 
 	loop_dcount:
@@ -49,7 +50,8 @@ _ft_putnbr:
 
 	next:
 		cmp rdi, 0x0
-		jle put_sign
+		jl put_sign
+		jmp loop_power
 
 	put_sign:
 		push rdi

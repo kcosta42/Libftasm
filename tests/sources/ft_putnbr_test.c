@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:20:26 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/18 13:05:28 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/19 13:25:03 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void simple_test(void)
 	// int		p[2];
 	// char	buf[4];
 
-	ft_putnbr(42);
+	printf("---- %d ---\n", ft_putnbr(-42));
 	// out = dup(1);
 	// pipe(p);
 	// dup2(p[1], 1);

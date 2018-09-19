@@ -2,12 +2,19 @@
 %define WRITE				4
 %define STDOUT				1
 
+section .bss
+	buffer: resb 2
+
 section .text
 	global _ft_putchar
 
 _ft_putchar:
-	lea rsi, [rel rdi]
+	lea r14, [rel buffer]
+	mov [r14], rdi
+	mov byte [r14 + 1], 0
+
 	mov rdi, STDOUT
+	lea rsi, [rel r14]
 	mov rdx, 1
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
