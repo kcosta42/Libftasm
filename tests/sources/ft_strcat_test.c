@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:22:32 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 19:45:10 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:29:52 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void unittest1(void)
 
 void	ft_strcat_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	unittest1();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:04:36 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 19:16:06 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:29:14 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,43 +41,43 @@ mt_test_isupper(num19, 7);
 
 void	ft_isupper_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	test_num1();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	test_num2();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	test_num3();
-	printf("OK\nTest 04: ");
+	dprintf(1, "OK\nTest 04: ");
 	test_num4();
-	printf("OK\nTest 05: ");
+	dprintf(1, "OK\nTest 05: ");
 	test_num5();
-	printf("OK\nTest 06: ");
+	dprintf(1, "OK\nTest 06: ");
 	test_num6();
-	printf("OK\nTest 07: ");
+	dprintf(1, "OK\nTest 07: ");
 	test_num7();
-	printf("OK\nTest 08: ");
+	dprintf(1, "OK\nTest 08: ");
 	test_num8();
-	printf("OK\nTest 09: ");
+	dprintf(1, "OK\nTest 09: ");
 	test_num9();
-	printf("OK\nTest 10: ");
+	dprintf(1, "OK\nTest 10: ");
 	test_num10();
-	printf("OK\nTest 11: ");
+	dprintf(1, "OK\nTest 11: ");
 	test_num11();
-	printf("OK\nTest 12: ");
+	dprintf(1, "OK\nTest 12: ");
 	test_num12();
-	printf("OK\nTest 13: ");
+	dprintf(1, "OK\nTest 13: ");
 	test_num13();
-	printf("OK\nTest 14: ");
+	dprintf(1, "OK\nTest 14: ");
 	test_num14();
-	printf("OK\nTest 15: ");
+	dprintf(1, "OK\nTest 15: ");
 	test_num15();
-	printf("OK\nTest 16: ");
+	dprintf(1, "OK\nTest 16: ");
 	test_num16();
-	printf("OK\nTest 17: ");
+	dprintf(1, "OK\nTest 17: ");
 	test_num17();
-	printf("OK\nTest 18: ");
+	dprintf(1, "OK\nTest 18: ");
 	test_num18();
-	printf("OK\nTest 19: ");
+	dprintf(1, "OK\nTest 19: ");
 	test_num19();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:25:41 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 19:28:59 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:30:14 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ static void test_10_million_chars_string(void)
 
 void	ft_strlen_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	unittest1();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	unittest2();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	unittest3();
-	printf("OK\nTest 04: ");
+	dprintf(1, "OK\nTest 04: ");
 	test_10_million_chars_string();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

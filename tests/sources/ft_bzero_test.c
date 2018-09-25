@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:44:36 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 18:57:58 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:27:54 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ static void test_zero_case(void)
 
 void	ft_bzero_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	simple_string();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	test_only_bzero_first_x_chars();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	test_zero_case();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

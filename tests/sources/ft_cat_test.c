@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 22:40:53 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/13 23:18:39 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:31:05 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,13 @@ static void simple_test2(void)
 
 void	ft_cat_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	simple_test();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	fd_negative_test();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	close_before_cat();
-	printf("OK\n");
+	dprintf(1, "OK\nTest 04:\n");
 	simple_test2();
+	dprintf(1, "\nOK\n");
 }

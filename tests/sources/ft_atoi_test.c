@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:56:52 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 22:25:49 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:27:44 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,69 +54,69 @@ mt_test_atoi(num32, "2147483647");
 
 void	ft_atoi_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	test_num1();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	test_num2();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	test_num3();
-	printf("OK\nTest 04: ");
+	dprintf(1, "OK\nTest 04: ");
 	test_num4();
-	printf("OK\nTest 05: ");
+	dprintf(1, "OK\nTest 05: ");
 	test_num5();
-	printf("OK\nTest 06: ");
+	dprintf(1, "OK\nTest 06: ");
 	test_num6();
-	printf("OK\nTest 07: ");
+	dprintf(1, "OK\nTest 07: ");
 	test_num7();
-	printf("OK\nTest 08: ");
+	dprintf(1, "OK\nTest 08: ");
 	test_num8();
-	printf("OK\nTest 09: ");
+	dprintf(1, "OK\nTest 09: ");
 	test_num9();
-	printf("OK\nTest 10: ");
+	dprintf(1, "OK\nTest 10: ");
 	test_num10();
-	printf("OK\nTest 11: ");
+	dprintf(1, "OK\nTest 11: ");
 	test_num11();
-	printf("OK\nTest 12: ");
+	dprintf(1, "OK\nTest 12: ");
 	test_num12();
-	printf("OK\nTest 13: ");
+	dprintf(1, "OK\nTest 13: ");
 	test_num13();
-	printf("OK\nTest 14: ");
+	dprintf(1, "OK\nTest 14: ");
 	test_num14();
-	printf("OK\nTest 15: ");
+	dprintf(1, "OK\nTest 15: ");
 	test_num15();
-	printf("OK\nTest 16: ");
+	dprintf(1, "OK\nTest 16: ");
 	test_num16();
-	printf("OK\nTest 17: ");
+	dprintf(1, "OK\nTest 17: ");
 	test_num17();
-	printf("OK\nTest 18: ");
+	dprintf(1, "OK\nTest 18: ");
 	test_num18();
-	printf("OK\nTest 19: ");
+	dprintf(1, "OK\nTest 19: ");
 	test_num19();
-	printf("OK\nTest 20: ");
+	dprintf(1, "OK\nTest 20: ");
 	test_num20();
-	printf("OK\nTest 21: ");
+	dprintf(1, "OK\nTest 21: ");
 	test_num21();
-	printf("OK\nTest 22: ");
+	dprintf(1, "OK\nTest 22: ");
 	test_num22();
-	printf("OK\nTest 23: ");
+	dprintf(1, "OK\nTest 23: ");
 	test_num23();
-	printf("OK\nTest 24: ");
+	dprintf(1, "OK\nTest 24: ");
 	test_num24();
-	printf("OK\nTest 25: ");
+	dprintf(1, "OK\nTest 25: ");
 	test_num25();
-	printf("OK\nTest 26: ");
+	dprintf(1, "OK\nTest 26: ");
 	test_num26();
-	printf("OK\nTest 27: ");
+	dprintf(1, "OK\nTest 27: ");
 	test_num27();
-	printf("OK\nTest 28: ");
+	dprintf(1, "OK\nTest 28: ");
 	test_num28();
-	printf("OK\nTest 29: ");
+	dprintf(1, "OK\nTest 29: ");
 	test_num29();
-	printf("OK\nTest 30: ");
+	dprintf(1, "OK\nTest 30: ");
 	test_num30();
-	printf("OK\nTest 31: ");
+	dprintf(1, "OK\nTest 31: ");
 	test_num31();
-	printf("OK\nTest 32: ");
+	dprintf(1, "OK\nTest 32: ");
 	test_num32();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

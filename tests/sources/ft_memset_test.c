@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:18:51 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 19:28:19 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:29:30 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ static void unittest3(void)
 
 void	ft_memset_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	unittest1();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	unittest2();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	unittest3();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

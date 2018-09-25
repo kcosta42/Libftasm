@@ -3,6 +3,7 @@
   "editor.insertSpaces": false,
   "files.associations": {
     "*.tpp": "cpp",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "ft_tests.h": "c"
   }
 }

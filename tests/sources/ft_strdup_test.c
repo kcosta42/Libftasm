@@ -6,7 +6,7 @@
 /*   By: kcosta <kcosta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 19:23:51 by kcosta            #+#    #+#             */
-/*   Updated: 2018/09/10 20:46:43 by kcosta           ###   ########.fr       */
+/*   Updated: 2018/09/25 14:30:08 by kcosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ static void unittest3(void)
 
 void	ft_strdup_test(void)
 {
-	printf("Test 01: ");
+	dprintf(1, "Test 01: ");
 	unittest1();
-	printf("OK\nTest 02: ");
+	dprintf(1, "OK\nTest 02: ");
 	unittest2();
-	printf("OK\nTest 03: ");
+	dprintf(1, "OK\nTest 03: ");
 	unittest3();
-	printf("OK\n");
+	dprintf(1, "OK\n");
 }

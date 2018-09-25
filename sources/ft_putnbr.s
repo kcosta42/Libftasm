@@ -33,42 +33,36 @@ ft_dcount:
 
 
 _ft_putnbr:
+	push rdi
 
 	call ft_dcount
-	mov rcx, rax
+	mov r13, rax
+
+	pop rdi
 
 	mov r15, 0x01
 	mov r14, 0x0A
 
 	loop_digits:
-		cmp rcx, 0x0
-		jle next
-		dec rcx
+		dec r13
+		cmp r13, 0x0
+		jle loop_power
 
 		imul r15, 0x0A
 		jmp loop_digits
 
-	next:
-		cmp rdi, 0x0
-		jl put_sign
-		jmp loop_power
-
-	put_sign:
-		push rdi
-		mov rdi, 0x2d ; mov rdi, '-'
-		call _ft_putchar
-		pop rdi
-		imul rdi, -1
-
 	loop_power:
-		push rdi
+		mov r12, rdi
 
-		mov rax, rdi
+		mov rax, r12
 		xor rdx, rdx
 		idiv r15
-		mov rdi, rax
+		mov r12, rax
 
-		add rdi, 0x30 ; add rdi, '0'
+		push rdi
+
+		add r12, 0x30 ; add r12, '0'
+		mov rdi, r12
 		call _ft_putchar
 
 		pop rdi

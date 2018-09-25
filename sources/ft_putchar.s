@@ -9,6 +9,8 @@ section .text
 	global _ft_putchar
 
 _ft_putchar:
+	push r14
+
 	lea r14, [rel buffer]
 	mov [r14], rdi
 	mov byte [r14 + 1], 0
@@ -19,4 +21,5 @@ _ft_putchar:
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
 
+	pop r14
 	ret
